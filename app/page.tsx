@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Countdown } from "@/components/countdown"
-import Link from "next/link"
 
 export default function HikkaTrip() {
   const tripStartDate = new Date("2025-12-04T07:00:00")
@@ -63,25 +62,21 @@ export default function HikkaTrip() {
               title="Villa Lagoonedge"
               description="Our Stay Resort"
               image="/luxury-sri-lanka-villa-garden-tropical.jpg"
-              url="https://www.google.com/maps/place/Villa+Lagoonedge/@6.1032879,80.1245683,17z/data=!4m9!3m8!1s0x3ae177752294f9f3:0xf4a83d7bc5cc5b56!5m2!4m1!1i2!8m2!3d6.1032879!4d80.1271432!16s%2Fg%2F11rtpvf099?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <PlaceCard
               title="Hikkaduwa Beach"
               description="Main Beach"
               image="/hikkaduwa-beach-coral-reef-sri-lanka.jpg"
-              url="https://www.google.com/maps/place/Hikkaduwa+Beach/@6.1347038,80.0948938,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae177e2cbcb6ead:0xd0adba737d2f45d9!8m2!3d6.1377266!4d80.0990596!16s%2Fg%2F1tgllb4n?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <PlaceCard
               title="Rathgama Lake"
               description="Kayak Adventure"
               image="/kayaking-rathgama-lake-mangroves-sri-lanka.jpg"
-              url="https://www.google.com/maps/place/Kayak+Adventure+Rathgama+Lake/@6.1066901,80.1356393,15.69z/data=!4m6!3m5!1s0x3ae1771132da3101:0x26dd2586b2efd86a!8m2!3d6.1065981!4d80.1423984!16s%2Fg%2F11sg_gz0dh?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <PlaceCard
               title="Dodanduwa Cliff"
               description="500m from Resort"
               image="/dodanduwa-cliff-sri-lanka-sea-view.jpg"
-              url="https://www.google.com/maps/place/Dodanduwa+Cliff/@6.1011887,80.1210809,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae177d76d365449:0x7615a592cb2fbbca!8m2!3d6.1011834!4d80.1236558!16s%2Fg%2F11hf6ms8cr?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
           </div>
         </section>
@@ -303,25 +298,23 @@ function DateCard({
   )
 }
 
-function PlaceCard({ title, description, image,  url }: { title: string; description: string; image: string; url?: string }) {
+function PlaceCard({ title, description, image }: { title: string; description: string; image: string }) {
   return (
-    <Wrapper href={url || "#"} target="_blank">
-      <Card className="overflow-hidden border-none shadow-md group cursor-pointer h-full">
-        <div className="relative h-48 overflow-hidden">
-          <Image
-            src={image || "/placeholder.svg"}
-            alt={title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
-          <div className="absolute bottom-4 left-4 text-white">
-            <h3 className="font-bold text-lg mb-1">{title}</h3>
-            <p className="text-xs text-slate-200">{description}</p>
-          </div>
+    <Card className="overflow-hidden border-none shadow-md group cursor-pointer h-full">
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
+        <div className="absolute bottom-4 left-4 text-white">
+          <h3 className="font-bold text-lg leading-none mb-1">{title}</h3>
+          <p className="text-xs text-slate-200">{description}</p>
         </div>
-      </Card>
-    </Wrapper>
+      </div>
+    </Card>
   )
 }
 
