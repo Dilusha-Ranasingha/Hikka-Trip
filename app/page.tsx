@@ -117,8 +117,8 @@ export default function HikkaTrip() {
                     <CardTitle className="text-lg font-medium opacity-90">Total Estimated</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-4xl font-bold">Rs 39,000</div>
-                    <p className="text-blue-100 text-sm mt-1">Accom + Activities</p>
+                    <div className="text-4xl font-bold">Rs xxx,xxx</div>
+                    <p className="text-blue-100 text-sm mt-1">Will inform you later</p>
                   </CardContent>
                 </Card>
                 <Card className="border-none shadow-md bg-white dark:bg-slate-800">
