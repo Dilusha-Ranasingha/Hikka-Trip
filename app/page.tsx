@@ -6,13 +6,22 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Countdown } from "@/components/countdown"
 
 export default function HikkaTrip() {
+  const tripStartDate = new Date("2025-12-04T07:00:00")
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-slate-950 dark:to-slate-900 pb-20">
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full overflow-hidden rounded-b-[3rem] shadow-xl">
-        <Image src="/hikkaduwa-beach-aerial-vibrant-blue-ocean.jpg" alt="Hikkaduwa Beach" className="object-cover" fill priority />
+        <Image
+          src="/hikkaduwa-beach-aerial-vibrant-blue-ocean.jpg"
+          alt="Hikkaduwa Beach"
+          className="object-cover"
+          fill
+          priority
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white text-center">
           <Badge className="mb-4 bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-md px-4 py-1.5 text-sm uppercase tracking-widest">
@@ -20,10 +29,14 @@ export default function HikkaTrip() {
           </Badge>
           <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-2 drop-shadow-lg">Hikka Trip</h1>
           <p className="text-xl md:text-2xl font-light opacity-90 mb-8 max-w-2xl mx-auto">Sun, Sand, and Good Vibes</p>
+
+          <div className="mb-6">
+            <Countdown targetDate={tripStartDate} />
+          </div>
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 -mt-16 relative z-10 space-y-12">
+      <div className="max-w-5xl mx-auto px-4 -mt-8 relative z-10 space-y-12">
         {/* Dates Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <DateCard day="04" month="Dec" label="Check In" time="9/10 AM" icon={<Navigation className="w-5 h-5" />} />
@@ -45,10 +58,26 @@ export default function HikkaTrip() {
             <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-100">Visiting Places</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <PlaceCard title="Villa Lagoonedge" description="Our Stay Resort" image="/luxury-sri-lanka-villa-garden-tropical.jpg" />
-            <PlaceCard title="Hikkaduwa Beach" description="Main Beach" image="/hikkaduwa-beach-coral-reef-sri-lanka.jpg" />
-            <PlaceCard title="Rathgama Lake" description="Kayak Adventure" image="/kayaking-rathgama-lake-mangroves-sri-lanka.jpg" />
-            <PlaceCard title="Dodanduwa Cliff" description="500m from Resort" image="/dodanduwa-cliff-sri-lanka-sea-view.jpg" />
+            <PlaceCard
+              title="Villa Lagoonedge"
+              description="Our Stay Resort"
+              image="/luxury-sri-lanka-villa-garden-tropical.jpg"
+            />
+            <PlaceCard
+              title="Hikkaduwa Beach"
+              description="Main Beach"
+              image="/hikkaduwa-beach-coral-reef-sri-lanka.jpg"
+            />
+            <PlaceCard
+              title="Rathgama Lake"
+              description="Kayak Adventure"
+              image="/kayaking-rathgama-lake-mangroves-sri-lanka.jpg"
+            />
+            <PlaceCard
+              title="Dodanduwa Cliff"
+              description="500m from Resort"
+              image="/dodanduwa-cliff-sri-lanka-sea-view.jpg"
+            />
           </div>
         </section>
 
@@ -88,8 +117,8 @@ export default function HikkaTrip() {
                     <CardTitle className="text-lg font-medium opacity-90">Total Estimated</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-4xl font-bold">Rs xxx,xxx</div>
-                    <p className="text-blue-100 text-sm mt-1">Will inform you later</p>
+                    <div className="text-4xl font-bold">Rs 39,000</div>
+                    <p className="text-blue-100 text-sm mt-1">Accom + Activities</p>
                   </CardContent>
                 </Card>
                 <Card className="border-none shadow-md bg-white dark:bg-slate-800">
