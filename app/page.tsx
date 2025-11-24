@@ -123,7 +123,7 @@ export default function HikkaTrip() {
                 </Card>
                 <Card className="border-none shadow-md bg-white dark:bg-slate-800">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-lg font-medium text-slate-500">Collected Advance</CardTitle>
+                    <CardTitle className="text-lg font-medium text-slate-500">Paid Advance</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-4xl font-bold text-emerald-600">Rs 12,500</div>
@@ -136,13 +136,16 @@ export default function HikkaTrip() {
                     <CardTitle className="text-lg font-medium text-slate-500">Current Balance</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-4xl font-bold text-slate-800 dark:text-white">Rs 3,500</div>
+                    <div className="text-4xl font-bold text-slate-800 dark:text-white">Rs 6,000</div>
                     <div className="flex gap-2 mt-4 text-xs">
                       <Badge variant="outline" className="text-slate-500">
                         Savidya: 2500
                       </Badge>
                       <Badge variant="outline" className="text-slate-500">
                         Kavishka: 1000
+                      </Badge>
+                      <Badge variant="outline" className="text-slate-500">
+                        Ovinda: 2500
                       </Badge>
                     </div>
                   </CardContent>
