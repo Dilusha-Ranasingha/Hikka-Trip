@@ -1,6 +1,7 @@
 import type React from "react"
 import { CheckCircle2, MapPin, Navigation, Palmtree, Sunset, Wallet } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -62,21 +63,25 @@ export default function HikkaTrip() {
               title="Villa Lagoonedge"
               description="Our Stay Resort"
               image="/luxury-sri-lanka-villa-garden-tropical.jpg"
+              url="https://www.google.com/maps/place/Villa+Lagoonedge/@6.1032879,80.1245683,17z/data=!4m9!3m8!1s0x3ae177752294f9f3:0xf4a83d7bc5cc5b56!5m2!4m1!1i2!8m2!3d6.1032879!4d80.1271432!16s%2Fg%2F11rtpvf099?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <PlaceCard
               title="Hikkaduwa Beach"
               description="Main Beach"
               image="/hikkaduwa-beach-coral-reef-sri-lanka.jpg"
+              url="https://www.google.com/maps/place/Hikkaduwa+Beach/@6.1347038,80.0948938,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae177e2cbcb6ead:0xd0adba737d2f45d9!8m2!3d6.1377266!4d80.0990596!16s%2Fg%2F1tgllb4n?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <PlaceCard
               title="Rathgama Lake"
               description="Kayak Adventure"
               image="/kayaking-rathgama-lake-mangroves-sri-lanka.jpg"
+              url="https://www.google.com/maps/place/Kayak+Adventure+Rathgama+Lake/@6.1066901,80.1356393,15.69z/data=!4m6!3m5!1s0x3ae1771132da3101:0x26dd2586b2efd86a!8m2!3d6.1065981!4d80.1423984!16s%2Fg%2F11sg_gz0dh?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
             <PlaceCard
               title="Dodanduwa Cliff"
               description="500m from Resort"
               image="/dodanduwa-cliff-sri-lanka-sea-view.jpg"
+              url="https://www.google.com/maps/place/Dodanduwa+Cliff/@6.1011887,80.1210809,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae177d76d365449:0x7615a592cb2fbbca!8m2!3d6.1011834!4d80.1236558!16s%2Fg%2F11hf6ms8cr?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
             />
           </div>
         </section>
@@ -298,8 +303,13 @@ function DateCard({
   )
 }
 
-function PlaceCard({ title, description, image }: { title: string; description: string; image: string }) {
-  return (
+function PlaceCard({
+  title,
+  description,
+  image,
+  url,
+}: { title: string; description: string; image: string; url?: string }) {
+  const CardContent = (
     <Card className="overflow-hidden border-none shadow-md group cursor-pointer h-full">
       <div className="relative h-48 overflow-hidden">
         <Image
@@ -316,6 +326,16 @@ function PlaceCard({ title, description, image }: { title: string; description: 
       </div>
     </Card>
   )
+
+  if (url) {
+    return (
+      <Link href={url} target="_blank" rel="noopener noreferrer">
+        {CardContent}
+      </Link>
+    )
+  }
+
+  return CardContent
 }
 
 function Contributor({ name, amount }: { name: string; amount: number }) {
