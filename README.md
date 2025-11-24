@@ -14,7 +14,7 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/dilusha-ranasinghas-projects/v0-hikka-trip](https://vercel.com/dilusha-ranasinghas-projects/v0-hikka-trip)**
+**[https://vercel.com/dilusha-ranasinghas-projects/v0-hikka-trip](https://hikka-trip.vercel.app/)**
 
 ## Build your app
 
