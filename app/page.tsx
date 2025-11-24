@@ -143,7 +143,7 @@ export default function HikkaTrip() {
                       </Badge>
                       <Badge variant="outline" className="text-slate-500">
                         Kavishka: 1000
-                      </Badge>
+                      </Badge> <br/>
                       <Badge variant="outline" className="text-slate-500">
                         Ovinda: 2500
                       </Badge>
