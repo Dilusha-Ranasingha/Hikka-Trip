@@ -249,7 +249,7 @@ export default function HikkaTrip() {
                       <PaymentRow name="Deshan" paid={2500} />
                       <PaymentRow name="Savidya" paid={2500} />
                       <PaymentRow name="Pasindu" paid={0} toPay={2500} />
-                      <PaymentRow name="Ovinda" paid={0} toPay={2500} />
+                      <PaymentRow name="Ovinda" paid={2500} />
                       <PaymentRow name="Tharusha" paid={0} toPay={2500} />
                       <PaymentRow name="Dhanithya" paid={0} toPay={2500} />
                     </TableBody>
