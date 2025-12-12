@@ -247,7 +247,7 @@ export default function HikkaTrip() {
                       <PaymentRow name="Charith" paid={3500} breakdown="2500 + 1000" />
                       <PaymentRow name="Kavishka" paid={3500} breakdown="2500 + 1000" />
                       <PaymentRow name="Deshan" paid={2500} />
-                      <PaymentRow name="Savidya" paid={2500} />
+                      <PaymentRow name="Savidya" paid={0} toPay={2500} />
                       <PaymentRow name="Pasindu" paid={0} toPay={2500} />
                       <PaymentRow name="Ovinda" paid={2500} />
                       <PaymentRow name="Tharusha" paid={0} toPay={2500} />
