@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Countdown } from "@/components/countdown"
 
 export default function HikkaTrip() {
-  const tripStartDate = new Date("2025-12-04T07:00:00")
+  const tripStartDate = new Date("2026-01-24T07:00:00")
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-slate-950 dark:to-slate-900 pb-20">
@@ -39,16 +39,8 @@ export default function HikkaTrip() {
       <div className="max-w-5xl mx-auto px-4 -mt-8 relative z-10 space-y-12">
         {/* Dates Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <DateCard day="04" month="Dec" label="Check In" time="9/10 AM" icon={<Navigation className="w-5 h-5" />} />
-          <DateCard
-            day="05"
-            month="Dec"
-            label="Full Day"
-            time="Adventure"
-            active
-            icon={<Palmtree className="w-5 h-5" />}
-          />
-          <DateCard day="06" month="Dec" label="Check Out" time="9/10 AM" icon={<Sunset className="w-5 h-5" />} />
+          <DateCard day="24" month="Dec" label="Check In + Night" time="9/10 AM" icon={<Navigation className="w-5 h-5" />} />
+          <DateCard day="25" month="Dec" label="Check Out" time="9/10 AM" icon={<Sunset className="w-5 h-5" />} />
         </div>
 
         {/* Visiting Places */}
@@ -166,9 +158,9 @@ export default function HikkaTrip() {
                     <TableBody>
                       <TableRow>
                         <TableCell className="font-medium">Villa Lagoonedge</TableCell>
-                        <TableCell>Rs 26,000</TableCell>
+                        <TableCell>Rs 13,000</TableCell>
                         <TableCell className="text-emerald-600">Rs 7,500</TableCell>
-                        <TableCell className="text-right text-red-500 font-medium">Rs 18,500</TableCell>
+                        <TableCell className="text-right text-red-500 font-medium">Rs 5,500</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium">Kayaking Adventure</TableCell>
@@ -178,9 +170,9 @@ export default function HikkaTrip() {
                       </TableRow>
                       <TableRow className="bg-slate-50 dark:bg-slate-900 font-bold">
                         <TableCell>Total</TableCell>
-                        <TableCell>Rs 39,000</TableCell>
+                        <TableCell>Rs 26,000</TableCell>
                         <TableCell className="text-emerald-600">Rs 12,500</TableCell>
-                        <TableCell className="text-right text-red-500">Rs 26,500</TableCell>
+                        <TableCell className="text-right text-red-500">Rs 13,500</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
@@ -247,6 +239,7 @@ export default function HikkaTrip() {
                       <PaymentRow name="Charith" paid={3500} breakdown="2500 + 1000" />
                       <PaymentRow name="Kavishka" paid={3500} breakdown="2500 + 1000" />
                       <PaymentRow name="Deshan" paid={2500} />
+                      <PaymentRow name="Thamuditha" paid={0} toPay={2500} />
                       <PaymentRow name="Savidya" paid={0} toPay={2500} />
                       <PaymentRow name="Pasindu" paid={0} toPay={2500} />
                       <PaymentRow name="Ovinda" paid={2500} />
