@@ -38,7 +38,7 @@ export default function HikkaTrip() {
 
       <div className="max-w-5xl mx-auto px-4 -mt-8 relative z-10 space-y-12">
         {/* Dates Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <DateCard day="24" month="Dec" label="Check In + Night" time="9/10 AM" icon={<Navigation className="w-5 h-5" />} />
           <DateCard day="25" month="Dec" label="Check Out" time="9/10 AM" icon={<Sunset className="w-5 h-5" />} />
         </div>
