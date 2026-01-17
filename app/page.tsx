@@ -25,7 +25,7 @@ export default function HikkaTrip() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white text-center">
           <Badge className="mb-4 bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-md px-4 py-1.5 text-sm uppercase tracking-widest">
-            Sri Lanka • Dec 2025
+            Sri Lanka • Jan 2026
           </Badge>
           <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-2 drop-shadow-lg">Hikka Trip</h1>
           <p className="text-xl md:text-2xl font-light opacity-90 mb-8 max-w-2xl mx-auto">Sun, Sand, and Good Vibes</p>
