@@ -128,13 +128,16 @@ export default function HikkaTrip() {
                     <CardTitle className="text-lg font-medium text-slate-500">Current Balance</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-4xl font-bold text-slate-800 dark:text-white">Rs 3,500</div>
+                    <div className="text-4xl font-bold text-slate-800 dark:text-white">Rs 4,500</div>
                     <div className="flex gap-2 mt-4 text-xs">
                       <Badge variant="outline" className="text-slate-500">
                         Kavishka: 1000
                       </Badge> <br/>
                       <Badge variant="outline" className="text-slate-500">
                         Ovinda: 2500
+                      </Badge> <br/>
+                      <Badge variant="outline" className="text-slate-500">
+                        Dilusha: 1000
                       </Badge>
                     </div>
                   </CardContent>
@@ -221,7 +224,7 @@ export default function HikkaTrip() {
             <TabsContent value="payments">
               <Card>
                 <CardHeader>
-                  <CardTitle>Advance Payments</CardTitle>
+                  <CardTitle>Advance Payments(each Rs.5000)</CardTitle>
                   <CardDescription>Status of payments collected from the group</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -235,7 +238,7 @@ export default function HikkaTrip() {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      <PaymentRow name="Dilusha" paid={4000} breakdown="2500 + 1500" />
+                      <PaymentRow name="Dilusha" paid={5000} breakdown="2500 + 1500 + 1000" />
                       <PaymentRow name="Charith" paid={3500} breakdown="2500 + 1000" />
                       <PaymentRow name="Kavishka" paid={3500} breakdown="2500 + 1000" />
                       <PaymentRow name="Deshan" paid={2500} />
