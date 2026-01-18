@@ -332,7 +332,9 @@ function PaymentRow({
   toPay = 0,
   breakdown,
 }: { name: string; paid: number; toPay?: number; breakdown?: string }) {
-  const isPaid = toPay === 0
+
+  const REQUIRED_AMOUNT = 5000
+  const isPaid = paid >= REQUIRED_AMOUNT
 
   return (
     <TableRow>
@@ -342,6 +344,7 @@ function PaymentRow({
           {name}
         </div>
       </TableCell>
+
       <TableCell>
         <div className="flex flex-col">
           <span className={paid > 0 ? "text-slate-900 dark:text-white font-medium" : "text-slate-400"}>
@@ -350,6 +353,7 @@ function PaymentRow({
           {breakdown && <span className="text-[10px] text-slate-400">({breakdown})</span>}
         </div>
       </TableCell>
+
       <TableCell>
         {isPaid ? (
           <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200 gap-1 pl-1">
@@ -361,7 +365,10 @@ function PaymentRow({
           </Badge>
         )}
       </TableCell>
-      <TableCell className="text-right font-medium text-slate-600">{toPay > 0 ? `Rs ${toPay}` : "-"}</TableCell>
+
+      <TableCell className="text-right font-medium text-slate-600">
+        {paid < REQUIRED_AMOUNT ? `Rs ${REQUIRED_AMOUNT - paid}` : "-"}
+      </TableCell>
     </TableRow>
   )
 }
