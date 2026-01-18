@@ -221,7 +221,7 @@ export default function HikkaTrip() {
             <TabsContent value="payments">
               <Card>
                 <CardHeader>
-                  <CardTitle>Individual Payments Tracker</CardTitle>
+                  <CardTitle>Advance Payments</CardTitle>
                   <CardDescription>Status of payments collected from the group</CardDescription>
                 </CardHeader>
                 <CardContent>
